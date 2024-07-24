@@ -53,8 +53,9 @@ ERROR - 'ansible-galaxy' not functioning as expected
 
   'ansible-galaxy' is installed, but running it returns an error.
 
-  For more information, you can try observing the output of
-  'ansible-galaxy --version' in 'additional_build_steps'.
+  For more information, you can try adding 'ansible-galaxy --version'
+  to 'prepend_galaxy' in 'additional_build_steps' and observing
+  the output.
 **********************************************************************
 EOF
     exit 1
