@@ -46,7 +46,7 @@ fi
 ansible-galaxy --version
 
 if [ $? -ne 0 ]
-thene
+then
     cat<<EOF
 **********************************************************************
 ERROR - 'ansible-galaxy' not functioning as expected
