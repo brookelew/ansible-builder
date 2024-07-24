@@ -20,7 +20,7 @@
 
 set -x
 
-ansible-galaxy --version
+command -v ansible-galaxy
 
 if [ $? -ne 0 ]
 then
@@ -38,6 +38,23 @@ ERROR - Missing Ansible installation
   Ansible for you, or use 'additional_build_steps' to manually do
   this yourself. Alternatively, use a base image with Ansible already
   installed.
+**********************************************************************
+EOF
+    exit 1
+fi
+
+ansible-galaxy --version
+
+if [ $? -ne 0 ]
+thene
+    cat<<EOF
+**********************************************************************
+ERROR - 'ansible-galaxy' not functioning as expected
+
+  'ansible-galaxy' is installed, but running it returns an error.
+
+  For more information, you can try observing the output of
+  'ansible-galaxy --version' in 'additional_build_steps'.
 **********************************************************************
 EOF
     exit 1
