@@ -365,3 +365,4 @@ def test_bad_ansible_cfg(cli, runtime, ee_tag, data_dir, tmp_path):
         )
 
     assert "ERROR - 'ansible-galaxy' command not functioning as expected" in einfo.value.stdout
+    assert "ERROR: Error reading config file (/etc/ansible/ansible.cfg): Source contains parsing errors:" in einfo.value.stdout
